@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.production.hackr.Submit">
+
+
+    <TextView
+        android:id="@+id/submitHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="Submit Course/Tutorial"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/submitSubhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitHead"
+        android:layout_centerHorizontal="true"
+        android:text="Paste the course/tutorial link below:" />
+
+    <EditText
+        android:id="@+id/urlSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/submitHead"
+        android:layout_below="@+id/submitSubhead"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="URL of the Tutorial" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/urlSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:background="@color/input_login_hint"
+        android:text="Tell us more about this course/tutorial (optional)*" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/textView6"
+        android:id="@+id/tableLayout">
+        <TableRow>
+            <TextView
+                android:id="@+id/lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Programming language/Framework/Library:" />
+
+            <EditText
+                android:id="@+id/langEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:ems="14"
+                android:inputType="textPersonName"
+                android:hint="Eg. Python,C,Java etc" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.15"
+                android:text="Tags :" />
+
+
+
+            <CheckBox
+                android:id="@+id/Free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.2"
+                android:text="Free" />
+
+            <CheckBox
+                android:id="@+id/Paid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.02"
+                android:text="Paid" />
+
+            <CheckBox
+                android:id="@+id/Video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Video" />
+
+
+             <CheckBox
+                android:id="@+id/Book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Book" />
+
+   </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/courseFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="This course is for: " />
+
+            <RadioButton
+                android:id="@+id/beginner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:text="Beginner" />
+            <RadioButton
+                android:id="@+id/adv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Advanced" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout"
+        android:layout_centerHorizontal="true"
+        android:background="#31b0d5"
+        android:layout_marginTop="10dp"
+        android:text=" Submit Tutorial " />
+
+
+</RelativeLayout>
